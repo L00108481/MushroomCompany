@@ -42,11 +42,39 @@
                 </ul>
             </div> 
 
-            <div id="content-wrapper">				
-				<h2>Page Title goes here</h2>
-    			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc</p>
-            </div>
-            
+            <div id="content-wrapper">
+            	<div id ="content">				
+					<h1>Welcome </h1>
+	                <p>This is sample text, this is sample text, this is sample text, this is sample text, this is sample text, this is sample text, this is sample text, this is sample text, this is sample text, this is sample text, this is sample text, this is sample text, this is sample text, this is sample text, this is sample text, this is sample text, this is sample text, this is sample text, this is sample text, this is sample text, this is sample text, this is sample text, this is sample text,this is sample text, this is sample text, this is sample textThis is sample text, this is sample text.</p>
+					<h2>What we provide</h2>
+	                <p>This is sample text, this is sample text, this is sample text, this is sample text</p>
+	                
+	                <div id="box1">
+	                	<img src="<c:url value="/resources/images/box1.jpg"/>">
+	                    <h2>Mushrooms</h2>
+	                    <p>This is sample text, this is sample text, this is sample text, this is sample textThis is sample text, this is sample text.</p>
+	                </div>
+	                
+	                <div id="box2">
+	                    <img src="<c:url value="/resources/images/box2.png"/>">
+	                    <h2>Truffles</h2>
+	                    <p>This is sample text, this is sample text, this is sample text, this is sample textThis is sample text, this is sample text.</p>
+	                </div>
+                </div>
+                
+				<div id ="right-side">
+					<h2>Why choose us?</h2>
+	                <ul>
+	                	<li>Professional service</li>
+	                    <li>Fast delivery</li>
+	                    <li>Competitive prices</li>
+	                    <li>V.A.T registered. Tax compliant</li>
+	                    <li>Friendly staff</li>
+	                </ul>
+	                <br>
+					<h3>Check out our location below</h3>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2291.280075589289!2d-7.739189584363695!3d54.95064778034645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x485f94ccc1511609%3A0x94ae4d838a4b6d17!2sMain+Street!5e0!3m2!1sen!2sie!4v1502550701292" width="300" height="225" frameborder="0" style="border:0" allowfullscreen></iframe>            </div>
+            	</div>
             <div id="footer">
                 <p>&copy;Copyright 2017 &bull; All Rights Reserved &bull; DevOps Mushroom Design Company &bull; 123 Main Street Letterkenny </p>
             </div>
