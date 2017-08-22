@@ -4,7 +4,7 @@
 
 	<div id="content-wrapper">
 		<div id="content">
-			<h1>about page</h1>
+			<h1>contact page</h1>
 		</div>
 		<jsp:include page="_footer.jsp" />
 	</div>

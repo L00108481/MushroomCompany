@@ -15,46 +15,78 @@ import mushroom.spring.dao.CustomerDAO;
 import mushroom.spring.model.Customer;
 
 @Controller
-public class HomeController {
+public class MainController {
 
 	@Autowired
 	private CustomerDAO customerDAO;
 	
+	
 	@RequestMapping(value="/")
-	public ModelAndView listCustomer(ModelAndView model) throws IOException{
-		List<Customer> listCustomer = customerDAO.list();
-		model.addObject("listCustomer", listCustomer);
-		model.setViewName("index");
-		
-		return model;
+	public String home(){
+		return "index";
+	}
+	
+	
+	@RequestMapping(value="/home", method = RequestMethod.GET)
+	public String index(){
+		return "index";
 	}
 	
 	@RequestMapping(value = "/newCustomer", method = RequestMethod.GET)
 	public ModelAndView newCustomer(ModelAndView model) {
 		Customer newCustomer = new Customer();
 		model.addObject("customer", newCustomer);
-		model.setViewName("CustomerForm");
+		model.setViewName("addCustomer");
+		return model;
+	}
+	
+	@RequestMapping(value = "/about", method = RequestMethod.GET)
+	public String about() {
+	    return "about";
+	}
+	
+	@RequestMapping(value="/products", method = RequestMethod.GET)
+	public String products(){
+		return "products";
+	}
+	
+	@RequestMapping(value="/contact", method = RequestMethod.GET)
+	public String contact(){
+		return "contact";
+	}
+	
+	@RequestMapping(value="/login", method = RequestMethod.GET)
+	public String login(){
+		return "login";
+	}
+	
+	@RequestMapping(value = "/customerForm")
+	public ModelAndView listCustomer(ModelAndView model) throws IOException{
+		List<Customer> listCustomer = customerDAO.list();
+		model.addObject("listCustomer", listCustomer);
+		model.setViewName("customerForm");
+		
 		return model;
 	}
 	
 	@RequestMapping(value = "/saveCustomer", method = RequestMethod.POST)
 	public ModelAndView saveCustomer(@ModelAttribute Customer customer) {
 		customerDAO.saveOrUpdate(customer);		
-		return new ModelAndView("redirect:/");
+		return new ModelAndView("redirect:/customerForm");
 	}
 	
 	@RequestMapping(value = "/deleteCustomer", method = RequestMethod.GET)
 	public ModelAndView deleteCustomer(HttpServletRequest request) {
 		int customerId = Integer.parseInt(request.getParameter("id"));
 		customerDAO.delete(customerId);
-		return new ModelAndView("redirect:/");
+		return new ModelAndView("redirect:/customerForm");
 	}
 	
 	@RequestMapping(value = "/editCustomer", method = RequestMethod.GET)
 	public ModelAndView editCustomer(HttpServletRequest request) {
 		int customerId = Integer.parseInt(request.getParameter("id"));
 		Customer customer = customerDAO.get(customerId);
-		ModelAndView model = new ModelAndView("CustomerForm");
+		ModelAndView model = new ModelAndView("addCustomer");
 		model.addObject("customer", customer);
 		
 		return model;
